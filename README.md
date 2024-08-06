@@ -1,1 +1,1 @@
-# This is calculator for KATA
+** This is calculator for KATA **
