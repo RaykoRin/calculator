@@ -13,8 +13,7 @@ var romanToArabic = map[string]int{
 }
 
 var arabicToRoman = map[int]string{
-	1: "I", 2: "II", 3: "III", 4: "IV", 5: "V",
-	6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X",
+	10: "X", 9: "IX", 5: "V", 4: "IV", 1: "I",
 }
 
 func isRoman(numeral string) bool {
@@ -37,7 +36,7 @@ func toRoman(arabic int) (string, error) {
 	for arabic > 0 {
 		for arabicValue, romanValue := range arabicToRoman {
 			if arabic >= arabicValue {
-				roman = romanValue
+				roman += romanValue
 				arabic -= arabicValue
 				break
 			}
