@@ -109,6 +109,10 @@ func calculate(expression string) (string, error) {
 		return "", errors.New("используются одновременно разные системы счисления")
 	}
 
+	if num1 == 0 || num2 == 0 {
+		return "", errors.New("операнд не может быть равен нулю")
+	}
+
 	var result int
 	switch operator {
 	case "+":
